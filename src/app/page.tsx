@@ -7,6 +7,7 @@ export default function Home() {
       <Text />
       <Compulsory />
       <Advance />
+      testing
     </div>
   );
 }
