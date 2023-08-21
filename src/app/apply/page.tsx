@@ -4,9 +4,8 @@ import {
   EmailAndOtpFields,
   Input,
   Loader,
-  SocialInvitation,
 } from "@/components";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { IApplyForm } from "@/types";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -33,20 +32,6 @@ export default function Page() {
     email: "",
     otp: "",
   });
-  const [showSocialInvitation, setShowSocialInvitation] = useState<
-    boolean | null
-  >(null);
-
-  useEffect(() => {
-    const facebook = localStorage.getItem("facebook");
-    const youtube = localStorage.getItem("youtube");
-    const twitter = localStorage.getItem("twitter");
-    const instagram = localStorage.getItem("instagram");
-
-    if (!(facebook && youtube && twitter && instagram)) {
-      setShowSocialInvitation(true);
-    } else setShowSocialInvitation(false);
-  }, []);
 
   const {
     register,
@@ -149,17 +134,7 @@ export default function Page() {
         </>
       )}
 
-      {showSocialInvitation === null && (
-        <div className="justify-centers flex h-[85vh] items-center">
-          <Loader width="w-32" height="h-32" />
-        </div>
-      )}
-
-      {showSocialInvitation && (
-        <SocialInvitation setShowSocialInvitation={setShowSocialInvitation} />
-      )}
-
-      {!isApplied && showSocialInvitation === false && (
+      {!isApplied && (
         <form
           className="w z-10 mx-4 my-10 w-full max-w-2xl rounded bg-opacity-30 px-4 py-8 text-black shadow-lg backdrop-blur-3xl md:mx-10 md:px-6"
           onSubmit={handleSubmit(onFormSubmit)}

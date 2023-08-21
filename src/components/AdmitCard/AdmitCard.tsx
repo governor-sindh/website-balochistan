@@ -14,7 +14,7 @@ export default function AdmitCard({ data }: { data: IAdmitCard }) {
       <div className="flex items-center justify-evenly">
         <Image
           src={govtLogo}
-          alt="govt sindh logo"
+          alt="govt Balochistan logo"
           width={90}
           className="w-[70px] sm:w-[80px] md:w-[90px]"
         />
@@ -22,7 +22,7 @@ export default function AdmitCard({ data }: { data: IAdmitCard }) {
           style={poppins.style}
           className="text-center text-lg font-bold text-main md:text-3xl"
         >
-          Governor Sindh Initiative for
+          Governor Balochistan Initiative for
           <br className="hidden md:block" />
           Artificial Intelligence, Web 3.0 & Metaverse
         </h1>
@@ -93,7 +93,7 @@ export default function AdmitCard({ data }: { data: IAdmitCard }) {
           <div className="my-1 flex text-lg">
             <h6 className="w-40 font-bold min-[375px]:w-48 md:w-52">Venue :</h6>
             <p className="w-32 border-b-2 border-gray-700  capitalize xs:w-48 md:w-60 ">
-              Governor House Sindh
+              Governor House Balochistan
               <span className="h-[2px] w-full bg-gray-700"></span>
             </p>
           </div>

@@ -1,1 +1,1 @@
-# Governor Sindh Initiative for AI, Web3, and Metaverse Education
+# Governor Balochistan's Initiative for AI, Web3, and Metaverse Education

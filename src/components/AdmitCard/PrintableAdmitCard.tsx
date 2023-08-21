@@ -14,7 +14,7 @@ export default function PrintableAdmitCard({ data }: { data: IAdmitCard }) {
       <div className="flex items-center">
         <Image
           src={govtLogo}
-          alt="govt sindh logo"
+          alt="govt Balochistan logo"
           width={90}
           className="w-[70px] sm:w-[80px] md:w-[90px]"
         />
@@ -22,7 +22,7 @@ export default function PrintableAdmitCard({ data }: { data: IAdmitCard }) {
           style={poppins.style}
           className="text-center text-3xl font-bold text-main"
         >
-          Governor Sindh Initiative for
+          Governor Balochistan Initiative for
           <br />
           Artificial Intelligence, Web 3.0 & Metaverse
         </h1>
@@ -73,7 +73,7 @@ export default function PrintableAdmitCard({ data }: { data: IAdmitCard }) {
           <div className="my-1 flex text-lg">
             <h6 className="w-52 font-bold">Venue :</h6>
             <p className="w-60 border-b-2 border-gray-700 capitalize">
-              Governor House Sindh
+              Governor House Balochistan
             </p>
           </div>
         </div>
