@@ -11,7 +11,7 @@ import {
   years,
 } from "./form/formData";
 
-import { socialLinks } from "./socialLinks";
+import { socialLinks } from "./socialLinks/socialIcons";
 
 export {
   YoutubeData,

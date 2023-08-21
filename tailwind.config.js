@@ -1,7 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
@@ -14,7 +13,7 @@ module.exports = {
       },
       colors: {
         main: "#64871e",
-        sub: "#2eb6e8",
+        sub: "#aab830",
       },
     },
     screens: {

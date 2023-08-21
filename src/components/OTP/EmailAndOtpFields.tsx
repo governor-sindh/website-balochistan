@@ -41,14 +41,14 @@ export default function EmailAndOtpFields({
       toast({
         title: `${res.message}`,
         status: "success",
-        duration: 9000,
+        duration: 5000,
         isClosable: true,
       });
     } catch (err: any) {
       toast({
         title: `${err.message || "Unknown Error"}`,
         status: "error",
-        duration: 9000,
+        duration: 5000,
         isClosable: false,
       });
     } finally {

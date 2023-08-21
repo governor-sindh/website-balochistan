@@ -30,6 +30,7 @@ export default function Input({
       "ArrowLeft",
       "ArrowRight",
       "Control",
+      "Enter",
     ];
 
     if (!numericKeys.includes(event.key) && !allowedKeys.includes(event.key)) {
@@ -55,7 +56,10 @@ export default function Input({
         <input
           type={type}
           onKeyDown={
-            id === "cnic" || id === "phoneNumber" || id === "otp"
+            id === "cnic" ||
+            id === "phoneNumber" ||
+            id === "otp" ||
+            id === "regNo"
               ? handleKeyDown
               : () => {}
           }
@@ -67,6 +71,8 @@ export default function Input({
               ? 10
               : id === "otp"
               ? 6
+              : id === "regNo"
+              ? 10
               : ""
           }
           max={type === "date" ? `${new Date().getFullYear() - 13}-12-29` : ""}
@@ -90,6 +96,7 @@ export default function Input({
                         cnic: "",
                         email: "",
                         otp: "",
+                        regNo: "",
                       })
                     : "";
                 }

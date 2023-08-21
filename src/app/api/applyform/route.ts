@@ -9,6 +9,7 @@ import { createConnection } from "../nodeMailer";
 // import { sendConfirmationEmail } from "@/lib/confirmationTemplates";
 import { otpCodes } from "@/lib/schema/otpCodes";
 import { sendConfirmationEmail } from "@/lib/confirmationTemplates";
+import { officialEmail } from "@/data/socialLinks/socialLinks";
 
 export async function POST(request: NextRequest, res: NextApiResponse) {
   const {
@@ -196,7 +197,7 @@ export async function POST(request: NextRequest, res: NextApiResponse) {
       try {
         await transporter.sendMail({
           to: email, // Change to your recipient
-          from: "education@governorsindh.com", // Change to your verified sender
+          from: officialEmail, // Change to your verified sender
           subject:
             "Thank you for expressing your interest in the Governor’s Initiative for AI, Web 3.0 & Metaverse Program!",
           html: sendConfirmationEmail(fullName, `${user.id}`.padStart(8, "0")), // html body

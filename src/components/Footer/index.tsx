@@ -2,6 +2,7 @@ import Link from "next/link";
 import { CompulsoryData, tracks } from "@/data";
 import { AiOutlineMail } from "react-icons/ai";
 import { Icons } from "@/components";
+import { officialEmail } from "@/data/socialLinks/socialLinks";
 
 function Footer() {
   return (
@@ -46,13 +47,13 @@ function Footer() {
             <Icons />
             <Link
               className="mt-4 flex items-center py-1 text-main underline"
-              href="mailto:education@governorsindh.com"
+              href={`mailto:${officialEmail}`}
               target="_blank"
             >
               <div className="mr-3 h-6 w-6">
                 <AiOutlineMail className="h-6 w-6 text-main" />
               </div>
-              education@governorsindh.com
+              {officialEmail}
             </Link>
           </div>
         </div>

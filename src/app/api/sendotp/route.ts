@@ -4,6 +4,8 @@ import { otpCodes } from "@/lib/schema/otpCodes";
 import { eq } from "drizzle-orm";
 import sgMail from "@sendgrid/mail";
 import { createConnection } from "../nodeMailer";
+import { officialEmail } from "@/data/socialLinks/socialLinks";
+
 sgMail.setApiKey(process.env.NEXT_PUBLIC_API_KEY!);
 
 export async function POST(request: NextRequest) {
@@ -44,7 +46,7 @@ export async function POST(request: NextRequest) {
 
     await transporter.sendMail({
       to: email, // Change to your recipient
-      from: "education@governorsindh.com", // Change to your verified sender
+      from: officialEmail, // Change to your verified sender
       subject: "Verify Email with Governers Website!",
       html: sendEmailtemplate(code), // html body
     });

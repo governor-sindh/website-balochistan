@@ -36,6 +36,8 @@ export default function Page() {
   const onFormSubmit = async (formData: IAdmitCardRequirements) => {
     try {
       setLoading(true);
+      toast.closeAll();
+
       const response = await fetch("/api/admitcard", {
         body: JSON.stringify({
           email: formData.email.toLowerCase(),
@@ -49,10 +51,11 @@ export default function Page() {
 
       setData(res);
     } catch (err: any) {
+      toast.closeAll();
       toast({
         title: `${err.message || "Unknown Error"}`,
         status: "error",
-        duration: 9000,
+        duration: 5000,
         isClosable: true,
       });
 

@@ -1,3 +1,5 @@
+import { officialEmail } from "@/data/socialLinks/socialLinks";
+
 export const sendConfirmationEmail = (userName: string, regNumber: string) => {
   let customerEmailTemplate = `<!DOCTYPE html>
         <html>
@@ -98,8 +100,8 @@ export const sendConfirmationEmail = (userName: string, regNumber: string) => {
                     <br>
                     &nbsp; Regards,<br>
                     &nbsp; Governor’s Initiative for AI, Web 3.0 &amp; Metaverse<br>
-                    &nbsp; Email: <a href="mailto:education@governorsindh.com" target="_blank">education@governorsindh.com</a><br>
-                    &nbsp; Website: <a href="http://www.governorsindh.com" rel="noreferrer" target="_blank" data-saferedirecturl="https://www.google.com/url?q=http://www.governorsindh.com&amp;source=gmail&amp;ust=1686649498374000&amp;usg=AOvVaw2PSJqhgEkIY6r6XMb6ynw0">www.governorsindh.com</a><div class="yj6qo"></div><div class="adL"><br>
+                    &nbsp; Email: <a href="mailto:${officialEmail}" target="_blank">${officialEmail}</a><br>
+                    &nbsp; Website: <a href="http://www.governorbalochinstan.com" rel="noreferrer" target="_blank" data-saferedirecturl="https://www.google.com/url?q=http://www.governorsindh.com&amp;source=gmail&amp;ust=1686649498374000&amp;usg=AOvVaw2PSJqhgEkIY6r6XMb6ynw0">www.governorsindh.com</a><div class="yj6qo"></div><div class="adL"><br>
                     <br>
                     </div>
                   </div>

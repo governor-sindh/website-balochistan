@@ -40,7 +40,8 @@ export type TFields =
   | "yearsOfExperience"
   | "industry"
   | "companyName"
-  | "otp";
+  | "otp"
+  | "regNo";
 
 export interface IAdmitCard {
   fullName: string;
@@ -52,4 +53,15 @@ export interface IAdmitCard {
 export interface IAdmitCardRequirements {
   email: string;
   otp: string;
+}
+
+export interface IResult {
+  id: string;
+  name?: string;
+  status: string;
+  message?: string;
+}
+export interface IResultRequirements {
+  cnic: string;
+  regNo: string;
 }

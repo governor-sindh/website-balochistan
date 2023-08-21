@@ -1,5 +1,6 @@
 "use client";
 import { AdmitCard, Icons, PrintableAdmitCard } from "@/components";
+import { officialEmail } from "@/data/socialLinks/socialLinks";
 import { IAdmitCard } from "@/types";
 import { Poppins } from "next/font/google";
 import Link from "next/link";
@@ -83,11 +84,11 @@ export default function DownloadAdmitCard({ data }: { data: IAdmitCard }) {
           </b>
           <Link
             className="mt-4 flex items-center text-main underline"
-            href="mailto:education@governorsindh.com"
+            href={`mailto:${officialEmail}`}
             target="_blank"
           >
             <AiOutlineMail className="mr-3 h-6 w-6 text-main" />
-            education@governorsindh.com
+            {officialEmail}
           </Link>
         </p>
         <p className="my-4">
